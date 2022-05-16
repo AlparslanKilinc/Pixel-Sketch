@@ -14,8 +14,7 @@ html,body{
  body{
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
-    
+   flex-direction: column;
  }
  .header{
     display: flex;
@@ -27,38 +26,43 @@ html,body{
    gap: 1em;
  }
 
+ #grid-container{
+   display: flex;
+   flex: 1;
+   justify-content: center;
+   align-items: center;
+   gap: 4em;
+}
+
  #options{
     display: flex;
-    flex: 0.5;
+    flex: 1;
     flex-direction: column;
     gap: 2em;
     justify-content: center;
     align-items: flex-end;
  }
- #grid-container{
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 1em;
- }
+
  #grid{
     display: grid;
     background-color: aliceblue;
-    width: 80%;
-    height: 80%;
+    width: 600px;
+    height: 600px;
+    flex: 1 0 1;
+    padding:1em;
+    margin-left: 2em;
  }
+
 .box{
    
 }
 
-
-
  #grid-size{
    display: flex;
+   flex: 1;
+   flex-direction: column;
+   justify-content: center;
    align-self: center;
-   margin-right: 15em;
    gap: 2em;
  }
 

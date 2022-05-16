@@ -1,5 +1,5 @@
 // Defaults
-let size=32;
+let size=16;
 
 
 
