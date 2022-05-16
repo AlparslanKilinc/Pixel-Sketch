@@ -74,6 +74,9 @@ html,body{
     border-radius: 5px;
  }
 
+ #picker{
+    margin-right: 1.5em;
+ }
 
 
  footer{
