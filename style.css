@@ -3,10 +3,16 @@
    src: url(/Lobster/Lobster-Regular.ttf);
 }
 
+@keyframes slidebg {
+   to {
+     background-position:20vw;
+   }
+ }
+
 html,body{
    margin: 0;
    padding: 0;
-   background-color:#1e899c;
+   background-color:  #daded4;
    font-family: 'Lobster-Regular', Times, serif;
 }
 body{
@@ -22,10 +28,20 @@ body{
    gap: 2em;
    padding: 1em;
    font-family: 'Lobster-Regular', Times, serif;
+  
 }
-h1,h4,h5,p,h3{
+.info{
+display: flex;
+flex-direction: column;
+align-items: center;
+margin: 2em;
+
+}
+
+h1,p,h3{
    margin: 0;
    padding:0;
+   color: #3c403d;
 }
 h3{
    margin-left: 0.3em;
@@ -77,6 +93,7 @@ button{
    width: 100px;
    height: 50px;
    border-radius: 5px;
+   color: #3c403d;
 }
 
 #picker{
@@ -98,9 +115,57 @@ footer{
    padding: 1.3%;
 }
 
+
+/* Button Effects */
+
+.rainbow:hover{
+   background-image:     linear-gradient(
+      to right, 
+      #E7484F,
+      #E7484F 16.65%,
+      #F68B1D 16.65%,
+      #F68B1D 33.3%,
+      #FCED00 33.3%,
+      #FCED00 49.95%,
+      #009E4F 49.95%,
+      #009E4F 66.6%,
+      #00AAC3 66.6%,
+      #00AAC3 83.25%,
+      #732982 83.25%,
+      #732982 100%,
+      #E7484F 100%
+     
+     
+     
+    );
+  animation:slidebg 2s linear infinite;
+}
+
+button:hover,
+button:focus {
+  box-shadow: 3px 7px black;
+  transform: translateY(-0.25em);
+}
+
+input:hover,
+input:focus {
+  box-shadow: 3px 7px black;
+  transform: translateY(-0.25em);
+}
+
+
+
+
+
+
+
+
+
+
+
 /* Github logo Animation */
 .fa-github {
-   color: var(--primary-dark);
+   color: #3c403d;
    font-size: 24px;
    transition: transform 0.3s ease-in-out;
  }

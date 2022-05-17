@@ -21,7 +21,6 @@
    for(let i=0; i<size*size; i++){
      let box = document.createElement('div');
      box.addEventListener('mouseover',draw);
-     box.addEventListener('click',draw);
      box.style.backgroundColor='white';
      box.style.border='1px solid black';
      grid.insertAdjacentElement('beforeend',box);
