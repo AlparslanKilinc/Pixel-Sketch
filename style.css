@@ -21,6 +21,7 @@ body{
    align-items: center;
    gap: 2em;
    padding: 1em;
+   font-family: 'Lobster-Regular', Times, serif;
 }
 h1,h4,h5,p,h3{
    margin: 0;
