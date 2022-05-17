@@ -1,7 +1,7 @@
-@font-face {
+/* @font-face {
     font-family:"Lobster-Regular";
     src: url(/Lobster/Lobster-Regular.ttf);
-}
+} */
 
 
 
@@ -9,7 +9,7 @@ html,body{
     margin: 0;
     padding: 0;
     background-color:#dac4ac;
-    font-family: 'Lobster-Regular', Times, serif;
+    font-family:Georgia, 'Times New Roman', Times, serif;
  }
  body{
     min-height: 100vh;
@@ -52,9 +52,7 @@ html,body{
     margin-left: 2em;
  }
 
-.box{
-   
-}
+
 
  #grid-size{
    display: flex;
@@ -66,7 +64,7 @@ html,body{
  }
 
  button{
-    font-family: 'Lobster-Regular', Times, serif;
+    font-family:Georgia, 'Times New Roman', Times, serif;
     font-size: large;
     width: 100px;
     height: 50px;

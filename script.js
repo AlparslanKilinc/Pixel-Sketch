@@ -1,7 +1,7 @@
   // Defaults
  let size = 16;
  let col = 'black';
-
+ let click = true;
 
 // get Html elements 
 const grid=document.querySelector('#grid');
@@ -18,7 +18,11 @@ const grid=document.querySelector('#grid');
  const rainbow = document.querySelector('.rainbow');
  const clear = document.querySelector('.clear');
 
+//// click functionality 
 
+document.querySelector('body').addEventListener('click',()=>{
+    click=!click;
+  });
 
 //// Functions 
 function clearUp(){
@@ -27,7 +31,6 @@ function clearUp(){
       box.remove();
     });
 }
-
 
 function makeGrid(size,grid){
     grid.style.gridTemplateColumns= `repeat(${size}, 1fr)`;
@@ -42,13 +45,14 @@ function makeGrid(size,grid){
 }
 
 function draws (colors){
-  const boxes = document.querySelectorAll('.box');
-  boxes.forEach(box =>{
-   box.addEventListener('click',()=>{
-      box.style.backgroundColor= colors;
-   });
-
-});
+  if(click){
+    const boxes = document.querySelectorAll('.box');
+    boxes.forEach(box =>{
+     box.addEventListener('mouseover',()=>{
+        box.style.backgroundColor= colors;
+     });
+    });
+  }
 }
 function getRainbow(){
   const r = randomBetween(0, 255);
@@ -60,14 +64,15 @@ function getRainbow(){
 }
 
 function drawsRainbow (){
-  
+  if(click){
   const boxes = document.querySelectorAll('.box');
   boxes.forEach(box =>{
-   box.addEventListener('click',()=>{
+   box.addEventListener('mouseover',()=>{
       box.style.backgroundColor= getRainbow();
 
    });
   });
+}
 
 }
 
@@ -101,18 +106,18 @@ clear.addEventListener('click' , ()=>{
 eraser.addEventListener('click' , ()=>{
   const boxes = document.querySelectorAll('.box');
   boxes.forEach(box =>{
-   box.addEventListener('click',()=>{
+   box.addEventListener('mouseover',()=>{
       box.style.backgroundColor= 'aliceblue';
    });
 });
 });
 
-draw.addEventListener('click',()=>{
+draw.addEventListener('mouseover',()=>{
   let c = col;
   draws(c);
 });
 
-rainbow.addEventListener('click',()=>{
+rainbow.addEventListener('mouseover',()=>{
   drawsRainbow();
 });
 
