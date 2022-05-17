@@ -1,6 +1,6 @@
 @font-face {
    font-family:"Lobster-Regular";
-   src: url(/Lobster/Lobster-Regular.ttf);
+   src: url(./Lobster/Lobster-Regular.ttf);
 }
 
 @keyframes slidebg {
