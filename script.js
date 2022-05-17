@@ -1,6 +1,11 @@
   /// Default
   let color = 'black';
   let click = true;
+  let off=false;
+
+  
+
+
   //// Side Options 
   const picker = document.querySelector('#picker');
   picker.addEventListener('change' , (e)=>{
@@ -10,9 +15,10 @@
  
  //// Functions 
  function makeGrid(size){
-   let grid=document.querySelector('#grid');
+  let grid=document.querySelector('#grid');
+  let boxes= grid.querySelectorAll('div');
+  
    /// clear grid when making a new one
-   let boxes= grid.querySelectorAll('div');
    boxes.forEach((div) => div.remove());
    /// set column/row of the grid
    grid.style.gridTemplateColumns= `repeat(${size}, 1fr)`;
@@ -22,9 +28,12 @@
      let box = document.createElement('div');
      box.addEventListener('mouseover',draw);
      box.style.backgroundColor='white';
-     box.style.border='1px solid black';
+     if(off) box.style.border='0px';
+     else box.style.border='1px solid black';
      grid.insertAdjacentElement('beforeend',box);
    }
+   
+   
  }
  
  /// Default Run 
@@ -42,6 +51,14 @@
      }
    }
  }
+
+ function BorderChange(){
+  let grid=document.querySelector('#grid');
+  let boxes= grid.querySelectorAll('div');
+    off = !off;
+  if(off)boxes.forEach((div) => div.style.border='0px');
+  else boxes.forEach((div) => div.style.border='1px solid black');
+  }
  
  function clearUp(){
    let grid=document.querySelector('#grid');
