@@ -7,32 +7,38 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer> </script>
     <!-- Kit  -->
+    <link rel="shortcut icon" href="#">
     <script src="https://kit.fontawesome.com/12f012c91d.js" crossorigin="anonymous"></script>
     <title>Etch-a-Sketch</title>
 </head>
 <body>
+
     <header class="header">
         <h1>Etch-a-Sketch</h1>
+        <h4>Draw As You Hover Over The Grid</h4>
+        <h5>Click To Stop Drawing , Click Again To Continue</h5>
     </header>
-
 
     <main id="main">
         <div id="grid-container">
 
             <div id="options">
-                <input type="color" id="picker" value="#000000">
-                <button class="draw">Draw</button>
-                <button class="eraser">Eraser</button>
-                <button class="rainbow">Rainbow</button>
-                <button class="clear">Clear</button>
+                <div class="cp">  
+                    <h3>Color Picker </h3>
+                    <input type="color" id="picker" value="#000000">
+                </div>
+               
+                <button class="eraser"  onclick="changeColor('white')">Eraser</button>
+                <button class="rainbow" onclick="changeColor('rainbow')">Rainbow</button>
+                <button class="clear"   onclick="clearUp()">Clear</button>
             </div>
 
             <div id="grid"></div>
 
             <div id="grid-size">
-                <button class="Sixteen">16X16</button>
-                <button class="Thirty_two">32x32</button>
-                <button class="Sixty_four">64x64</button>
+                <button class="Sixteen"    onclick="makeGrid(16)">16X16</button>
+                <button class="Thirty_two" onclick="makeGrid(32)">32x32</button>
+                <button class="Sixty_four" onclick="makeGrid(64)">64x64</button>
             </div>
            
         </div>
