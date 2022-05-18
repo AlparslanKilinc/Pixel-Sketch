@@ -1,6 +1,6 @@
   /// Default
   let color = 'black';
-  let click = true;
+  let click = false;
   let off=false;
 
   
