@@ -41,7 +41,8 @@ margin: 2em;
 h1,p,h3{
    margin: 0;
    padding:0;
-   color: #3c403d;
+   color: #3c403d; 
+   
 }
 h3{
    margin-left: 0.3em;
@@ -76,6 +77,8 @@ h3{
    height: 600px;
    flex: 1 0 1;
    margin-left: 2em;
+   box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+   
 }
 
 #grid-size{
@@ -155,17 +158,9 @@ input:focus {
 
 
 
-
-
-
-
-
-
-
-
 /* Github logo Animation */
 .fa-github {
-   color: #3c403d;
+   color: rgb(240, 46, 169) ;
    font-size: 24px;
    transition: transform 0.3s ease-in-out;
  }
