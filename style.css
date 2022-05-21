@@ -120,9 +120,7 @@ footer{
 
 
 /* Button Effects */
-button,#grid,#picker{
-   cursor:pointer;
-}
+
 
 .rainbow:hover{
    background-image:     linear-gradient(
