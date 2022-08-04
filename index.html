@@ -13,48 +13,32 @@
     <title>Etch-a-Sketch</title>
 </head>
 <body>
-
     <header class="header">
         <h1>Etch-a-Sketch</h1>
     </header>
-    
     <div class="info">
-        <h3>Draw As You Hover Over The Grid</h3>
-        <h3>Click To Stop Drawing , Click Again To Continue</h3>
+        <h3>Draw As You Click and Drag Over The Grid</h3>
     </div>
-
     <main id="main">
-       
-        
         <div id="grid-container">
-
             <div id="options">
                 <div class="cp">  
                     <h3>Color Picker </h3>
                     <input type="color" id="picker" value="#000000">
                 </div>
-               
                 <button class="eraser"  onclick="changeColor('white')">Eraser</button>
                 <button class="rainbow" onclick="changeColor('rainbow')">Rainbow</button>
                 <button class="clear"   onclick="clearUp()">Clear</button>
                 <button class="border"   onclick="BorderChange()">Border Switch</button>
             </div>
-
             <div id="grid"></div>
-
             <div id="grid-size">
                 <button class="Sixteen"    onclick="makeGrid(16)">16X16</button>
                 <button class="Thirty_two" onclick="makeGrid(32)">32x32</button>
                 <button class="Sixty_four" onclick="makeGrid(64)">64x64</button>
             </div>
-           
         </div>
-
-        
-
     </main>
-
-
     <footer>
         <p> &copy; 2022 AlparslanKilinc</p>
         <a href="https://github.com/AlparslanKilinc" target="_blank"><i class="fa-brands fa-github"></i>

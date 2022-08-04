@@ -23,10 +23,8 @@ body{
 .header{
    display: flex;
    justify-content: center;
-   flex-direction: column;
    align-items: center;
-   gap: 2em;
-   padding: 1em;
+   padding: 1rem;
    font-family: 'Lobster-Regular', Times, serif;
   
 }
@@ -34,7 +32,7 @@ body{
 display: flex;
 flex-direction: column;
 align-items: center;
-margin: 2em;
+margin: 1em;
 
 }
 
@@ -140,13 +138,9 @@ button,#grid,#picker{
       #732982 83.25%,
       #732982 100%,
       #E7484F 100%
-     
-     
-     
     );
   animation:slidebg 2s linear infinite;
 }
-
 
 button:hover,
 button:focus {
@@ -159,8 +153,6 @@ input:focus {
   box-shadow: 3px 7px black;
   transform: translateY(-0.25em);
 }
-
-
 
 /* Github logo Animation */
 .fa-github {
