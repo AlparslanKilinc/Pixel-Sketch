@@ -1,9 +1,12 @@
 
 # Etch-a-Sketch
-Webpage that lets you make sketchs using diffrent grid sizes.
+### Options
+* Grid Size
+* Color Pallete
+* Random Color Generator 
+* Eraser
+* Border Lines On/Off
+* Clear
 
-It includes a color pallete,random color option and a eraser.
-
-You are able to click and hover to draw on the grid and click again to stop to give you full ability to draw as you please.
-
+You are able to click and drag to draw on the grid, giving you full ability to draw as you please.
 Live Preview:  https://alparslankilinc.github.io/Etch-a-Sketch/
