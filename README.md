@@ -1,5 +1,5 @@
 
-# Etch-a-Sketch
+# Pixel-Sketch
 #### Sketching Website
 You are able to click and drag to draw on the grid, giving you full ability to draw as you please.
 
