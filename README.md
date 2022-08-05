@@ -11,4 +11,4 @@ You are able to click and drag to draw on the grid, giving you full ability to d
 * Border Lines On/Off
 * Clear
 
-Live Preview:  https://alparslankilinc.github.io/Etch-a-Sketch/
+Live Preview: https://alparslankilinc.github.io/Pixel-Sketch/
