@@ -5,12 +5,12 @@
   let click = false;
   document.body.onmousedown = () => (click = true);
   document.body.onmouseup = () => (click = false);
-  document.addEventListener("touchstart",true);
-  document.addEventListener("touchend",false);
+  document.addEventListener("touchstart",()=>{click=true});
+  document.addEventListener("touchend",()=>{click=false});
  
 
   function makeGrid(size){
-    let grid=document.querySelector('#grid'); 
+    let grid=document.querySelector('#grid');
     let boxes= grid.querySelectorAll('div');
     /// clear grid when making a new one
     boxes.forEach((div) => div.remove());
@@ -21,12 +21,13 @@
     for(let i=0; i<size*size; i++){
       let box = document.createElement('div');
       box.addEventListener('mousemove', draw);
+      box.addEventListener("touchmove", draw);
       box.style.backgroundColor='white';
       if(BorderChanges) box.style.border='0px';
       else box.style.border='1px solid black';
       grid.insertAdjacentElement('beforeend',box);
     } 
-    grid.addEventListener("touchmove", draw);
+    
  }
 
  function draw (event){
