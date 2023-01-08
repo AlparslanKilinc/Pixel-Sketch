@@ -16,54 +16,39 @@ html,body{
    font-family: 'Lobster-Regular', Times, serif;
 }
 body{
-   min-height: 100vh;
+   height: 100%;
    display: flex;
-  flex-direction: column;
+   flex-direction: column;
 }
-.header{
+header{
    display: flex;
+   flex-direction: column;
    justify-content: center;
    align-items: center;
+   gap: 1rem;
    padding: 1rem;
    font-family: 'Lobster-Regular', Times, serif;
-  
 }
-.info{
-display: flex;
-flex-direction: column;
-align-items: center;
-margin: 1em;
 
-}
 
 h1,p,h3{
    margin: 0;
    padding:0;
    color: #3c403d; 
-   
-}
-h3{
-   margin-left: 0.3em;
-}
-#main{
-  display: flex;
-  flex: 1;
-  gap: 1em;
 }
 
-#grid-container{
+main{
   display: flex;
-  flex: 1;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  gap: 4em;
+  flex: 1;
+  gap: 2rem;
 }
 
 #options{
    display: flex;
-   flex: 1;
-   flex-direction: column;
-   gap: 2em;
+   flex-wrap: wrap;
+   gap: 1rem;
    justify-content: center;
    align-items: flex-end;
 }
@@ -71,27 +56,25 @@ h3{
 #grid{
    display: grid;
    background-color: aliceblue;
-   width: 600px;
-   height: 600px;
+   width: 270px;
+   height: 270px;
    flex: 1 0 1;
-   margin-left: 2em;
    box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
-   
 }
 
 #grid-size{
   display: flex;
   flex: 1;
-  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
   align-self: center;
-  gap: 2em;
+  gap: 1rem;
 }
 
 button{
    font-family: 'Lobster-Regular', Times, serif;
    font-size: large;
-   width: 100px;
+   width: 75px;
    height: 50px;
    border-radius: 5px;
    color: #3c403d;
@@ -164,6 +147,45 @@ input:focus {
  .fa-github:hover {
    transform: rotate(360deg) scale(1.2);
  }
+
+ /* Mobile */
+@media screen and (min-width: 375px) {
+   #grid{
+      width: 320px;
+      height: 320px;
+   }
+}
+
+@media screen and (min-width: 425px) {
+   #grid{
+      width: 390px;
+      height: 390px;
+   }
+ 
+}
+/* Tablet */
+@media screen and (min-width: 768px) {
+   #grid{
+      width: 590px;
+      height: 590px;
+   }
+   button{
+      width: 100px;
+   }
+
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+   #grid{
+      width: 610px;
+      height: 610px;
+   }
+   button{
+      width: 200px;
+   }
+}
+
 
 
 
