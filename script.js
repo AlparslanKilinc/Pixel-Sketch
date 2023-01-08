@@ -5,7 +5,11 @@
   let click = false;
   document.body.onmousedown = () => (click = true);
   document.body.onmouseup = () => (click = false);
-  document.body.touchstart = () => (click = true);
+  document.addEventListener("touchstart", event =>{
+    [...event.changedTouches].forEach(touch =>{
+
+    })
+  })
   document.body.touchend = () => (click = false);
 
   function makeGrid(size){
@@ -20,7 +24,10 @@
     for(let i=0; i<size*size; i++){
       let box = document.createElement('div');
       box.addEventListener('mousemove', draw);
-      box.addEventListener('touchmove', draw);
+      box.addEventListener("touchmove", draw);
+     
+      
+      
       box.style.backgroundColor='white';
       if(BorderChanges) box.style.border='0px';
       else box.style.border='1px solid black';
@@ -28,7 +35,8 @@
     } 
  }
 
- function draw (){
+ function draw (event){
+   event.preventDefault();
    if(click){
      if(color==='rainbow') {
        let rainbow = getRainbow();
