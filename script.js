@@ -2,9 +2,11 @@
   window.onload = () => {makeGrid(16);}
   let color = 'black';
   let BorderChanges=false;
-  let click = false
-  document.body.onmousedown = () => (click = true)
-  document.body.onmouseup = () => (click = false)
+  let click = false;
+  document.body.onmousedown = () => (click = true);
+  document.body.onmouseup = () => (click = false);
+  document.body.touchstart = () => (click = true);
+  document.body.touchend = () => (click = false);
 
   function makeGrid(size){
     let grid=document.querySelector('#grid');
@@ -17,8 +19,8 @@
   
     for(let i=0; i<size*size; i++){
       let box = document.createElement('div');
-      box.addEventListener('mouseover', draw);
-      box.addEventListener('mousedown', draw);
+      box.addEventListener('mousemove', draw);
+      box.addEventListener('touchmove', draw);
       box.style.backgroundColor='white';
       if(BorderChanges) box.style.border='0px';
       else box.style.border='1px solid black';
