@@ -16,7 +16,7 @@ html,body{
    font-family: 'Lobster-Regular', Times, serif;
 }
 body{
-   height: 100%;
+   max-height: 100vh;
    display: flex;
    flex-direction: column;
 }

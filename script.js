@@ -23,6 +23,7 @@
       //// Touch Move 
       grid.addEventListener("touchmove", event =>{
         event.preventDefault();
+        event.stopPropagation();
         let myLocation = event.touches[0];
         let realTarget = document.elementFromPoint(myLocation.clientX, myLocation.clientY);
         let y = getPosition(document.getElementById('grid')).y;
