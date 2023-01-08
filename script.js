@@ -5,12 +5,9 @@
   let click = false;
   document.body.onmousedown = () => (click = true);
   document.body.onmouseup = () => (click = false);
-  document.addEventListener("touchstart", event =>{
-    [...event.changedTouches].forEach(touch =>{
-
-    })
-  })
-  document.body.touchend = () => (click = false);
+  document.addEventListener("touchstart",true);
+  document.addEventListener("touchend",false);
+ 
 
   function makeGrid(size){
     let grid=document.querySelector('#grid');
