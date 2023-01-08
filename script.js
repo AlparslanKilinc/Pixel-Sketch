@@ -16,28 +16,29 @@
     }
     return { x: xPosition, y: yPosition };
 }
+let grid=document.querySelector('#grid');
+//// Touch Move 
+grid.addEventListener("touchmove", event =>{
+  event.preventDefault();
+  event.stopPropagation();
+  let myLocation = event.touches[0];
+  let realTarget = document.elementFromPoint(myLocation.clientX, myLocation.clientY);
+  let y = getPosition(document.getElementById('grid')).y;
+  let x = getPosition(document.getElementById('grid')).x;
+  console.log(y+grid.clientHeight);
+  console.log(x+grid.clientWidth);
+  if(x+grid.clientWidth>myLocation.clientX &&  myLocation.clientX>x  && y+grid.clientHeight>myLocation.clientY && myLocation.clientY >y)
+    if(color==='rainbow') {
+      let rainbow = getRainbow();
+      realTarget.style.backgroundColor=rainbow;
+      }else{
+      realTarget.style.backgroundColor = color;
+      }
+   });
  
 
   function makeGrid(size){
     let grid=document.querySelector('#grid');
-      //// Touch Move 
-      grid.addEventListener("touchmove", event =>{
-        event.preventDefault();
-        event.stopPropagation();
-        let myLocation = event.touches[0];
-        let realTarget = document.elementFromPoint(myLocation.clientX, myLocation.clientY);
-        let y = getPosition(document.getElementById('grid')).y;
-        let x = getPosition(document.getElementById('grid')).x;
-        console.log(y+grid.clientHeight);
-        console.log(x+grid.clientWidth);
-        if(x+grid.clientWidth>myLocation.clientX &&  myLocation.clientX>x  && y+grid.clientHeight>myLocation.clientY && myLocation.clientY >y)
-          if(color==='rainbow') {
-            let rainbow = getRainbow();
-            realTarget.style.backgroundColor=rainbow;
-            }else{
-            realTarget.style.backgroundColor = color;
-            }
-         });
     let boxes= grid.querySelectorAll('div');
     /// clear grid when making a new one
     boxes.forEach((div) => div.remove());

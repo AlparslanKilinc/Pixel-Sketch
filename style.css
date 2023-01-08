@@ -156,18 +156,11 @@ input:focus {
    }
 }
 
-@media screen and (min-width: 425px) {
-   #grid{
-      width: 390px;
-      height: 390px;
-   }
- 
-}
 /* Tablet */
 @media screen and (min-width: 768px) {
    #grid{
-      width: 590px;
-      height: 590px;
+      width: 490px;
+      height: 410px;
    }
    button{
       width: 100px;
@@ -179,7 +172,7 @@ input:focus {
 @media screen and (min-width: 1024px) {
    #grid{
       width: 610px;
-      height: 610px;
+      height: 410px;
    }
    button{
       width: 200px;
