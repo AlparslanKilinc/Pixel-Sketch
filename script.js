@@ -34,14 +34,12 @@
 
  function draw (event){
    event.preventDefault();
-   if(click){
      if(color==='rainbow') {
        let rainbow = getRainbow();
        this.style.backgroundColor=rainbow;
      }else{
        this.style.backgroundColor = color;
      }
-   }
  }
 
   //// Side Options 
