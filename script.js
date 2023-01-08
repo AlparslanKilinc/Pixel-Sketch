@@ -10,7 +10,7 @@
  
 
   function makeGrid(size){
-    let grid=document.querySelector('#grid');
+    let grid=document.querySelector('#grid'); 
     let boxes= grid.querySelectorAll('div');
     /// clear grid when making a new one
     boxes.forEach((div) => div.remove());
@@ -21,25 +21,24 @@
     for(let i=0; i<size*size; i++){
       let box = document.createElement('div');
       box.addEventListener('mousemove', draw);
-      box.addEventListener("touchmove", draw);
-     
-      
-      
       box.style.backgroundColor='white';
       if(BorderChanges) box.style.border='0px';
       else box.style.border='1px solid black';
       grid.insertAdjacentElement('beforeend',box);
     } 
+    grid.addEventListener("touchmove", draw);
  }
 
  function draw (event){
    event.preventDefault();
+   if(click){
      if(color==='rainbow') {
        let rainbow = getRainbow();
        this.style.backgroundColor=rainbow;
      }else{
        this.style.backgroundColor = color;
      }
+   }
  }
 
   //// Side Options 
